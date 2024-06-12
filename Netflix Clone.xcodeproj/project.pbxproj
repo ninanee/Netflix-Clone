@@ -22,6 +22,9 @@
 		967319AE2C1392BC00B081AF /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967319AD2C1392BC00B081AF /* DownloadsViewController.swift */; };
 		967319B52C17543400B081AF /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967319B42C17543400B081AF /* CollectionViewTableViewCell.swift */; };
 		967319FF2C179B3700B081AF /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967319FE2C179B3700B081AF /* HeroHeaderUIView.swift */; };
+		96731A012C189A8C00B081AF /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A002C189A8C00B081AF /* APICaller.swift */; };
+		96731A032C18BF0B00B081AF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A022C18BF0B00B081AF /* Movie.swift */; };
+		96731A052C18E60100B081AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A042C18E60100B081AF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		967319AD2C1392BC00B081AF /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		967319B42C17543400B081AF /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		967319FE2C179B3700B081AF /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		96731A002C189A8C00B081AF /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		96731A022C18BF0B00B081AF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		96731A042C18E60100B081AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		967319B12C17539700B081AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96731A022C18BF0B00B081AF /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		967319B22C17540100B081AF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96731A042C18E60100B081AF /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 		967319B32C17540E00B081AF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				96731A002C189A8C00B081AF /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -325,12 +334,15 @@
 			files = (
 				967319AA2C13928100B081AF /* UpcomingViewController.swift in Sources */,
 				967319FF2C179B3700B081AF /* HeroHeaderUIView.swift in Sources */,
+				96731A032C18BF0B00B081AF /* Movie.swift in Sources */,
 				967319AC2C1392A000B081AF /* SearchViewController.swift in Sources */,
 				967319AE2C1392BC00B081AF /* DownloadsViewController.swift in Sources */,
 				967319A82C137FC500B081AF /* HomeViewController.swift in Sources */,
 				9673197E2C13613B00B081AF /* Netflix_Clone.xcdatamodeld in Sources */,
 				967319B52C17543400B081AF /* CollectionViewTableViewCell.swift in Sources */,
+				96731A052C18E60100B081AF /* Extensions.swift in Sources */,
 				967319782C13613B00B081AF /* MainTabBarViewController.swift in Sources */,
+				96731A012C189A8C00B081AF /* APICaller.swift in Sources */,
 				967319742C13613B00B081AF /* AppDelegate.swift in Sources */,
 				967319762C13613B00B081AF /* SceneDelegate.swift in Sources */,
 			);
