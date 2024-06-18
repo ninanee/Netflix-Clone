@@ -10,6 +10,8 @@ import Foundation
 struct Constatns {
     static let API_KEY = "f2ae7a534a7f7b926545aaec95675ffb"
     static let baseURL = "https://api.themoviedb.org"
+    static let YoutubeAPI_KEY = "AIzaSyCTViHoPd-R4MqOOv4DFHaknh9ox8Irwvg"
+    static let YoutubeBaseURL = "https://youtube.googleapis.com/youtube/v3/search?"
 }
 
 enum APIError: Error {
@@ -142,6 +144,56 @@ class APICaller {
                 completion(.success(reselts.results))
             } catch {
                 completion(.failure(APIError.failedTogetData))
+            }
+          
+            
+        }
+        task.resume()
+    }
+    
+    func search(with query: String, completion: @escaping (Result<[Title], Error>)-> Void) {
+        
+        
+        // formating the url
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        
+        guard let url = URL(string: "\(Constatns.baseURL)/3/search/movie?api_key=\(Constatns.API_KEY)&query=\(query)") else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data,_, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            do{
+                let reselts = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                completion(.success(reselts.results))
+            } catch {
+                completion(.failure(APIError.failedTogetData))
+            }
+          
+            
+        }
+        task.resume()
+    }
+    
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>)-> Void) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        
+        guard let url = URL(string: "\(Constatns.YoutubeBaseURL)q=\(query)&key=\(Constatns.YoutubeAPI_KEY)") else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data,_, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            do{
+                let results = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data)
+                
+                completion(.success(results.items[0]))
+                
+                
+            } catch {
+                completion(.failure(error))
+                print(error.localizedDescription)
             }
           
             
