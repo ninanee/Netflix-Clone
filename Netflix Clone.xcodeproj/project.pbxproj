@@ -34,6 +34,7 @@
 		96731A102C1A380400B081AF /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A0F2C1A380400B081AF /* TitleTableViewCell.swift */; };
 		96731A122C1A3FFC00B081AF /* TiitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A112C1A3FFC00B081AF /* TiitleViewModel.swift */; };
 		96731A142C1B2C3400B081AF /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96731A132C1B2C3400B081AF /* SearchResultViewController.swift */; };
+		967495BF2C21C29F00662883 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967495BE2C21C29F00662883 /* DataPersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		96731A0F2C1A380400B081AF /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		96731A112C1A3FFC00B081AF /* TiitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiitleViewModel.swift; sourceTree = "<group>"; };
 		96731A132C1B2C3400B081AF /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		967495BE2C21C29F00662883 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				96731A002C189A8C00B081AF /* APICaller.swift */,
+				967495BE2C21C29F00662883 /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				967319AA2C13928100B081AF /* UpcomingViewController.swift in Sources */,
 				967319FF2C179B3700B081AF /* HeroHeaderUIView.swift in Sources */,
 				96731A032C18BF0B00B081AF /* Title.swift in Sources */,
+				967495BF2C21C29F00662883 /* DataPersistenceManager.swift in Sources */,
 				967319AC2C1392A000B081AF /* SearchViewController.swift in Sources */,
 				967319AE2C1392BC00B081AF /* DownloadsViewController.swift in Sources */,
 				967319A82C137FC500B081AF /* HomeViewController.swift in Sources */,

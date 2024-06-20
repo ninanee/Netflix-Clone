@@ -57,6 +57,17 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     private func downloadTitleAt(indexPath: IndexPath) {
         
+        DataPersistenceManager.shared.downloadTitlewith(model:title[indexPath.row]) { result in
+            switch result {
+            case .success():
+                print("Downloaded to Database")
+                NotificationCenter.default.post(name: NSNotification.Name("download"), object: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+        
+            }
+            
+        }
         
         //        print("Downloading \(title[indexPath.row].original_title)")
     }
@@ -64,6 +75,7 @@ class CollectionViewTableViewCell: UITableViewCell {
 
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return title.count
     }
@@ -80,6 +92,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let title = title[indexPath.row]
@@ -123,4 +136,5 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         }
         
         
+
 }

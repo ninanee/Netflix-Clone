@@ -58,6 +58,8 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(downloadButton)
         view.addSubview(overviewLabel)
         
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
         configureConstraint()
     }
     
